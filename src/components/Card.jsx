@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEllipsis } from '@fortawesome/free-solid-svg-icons'
 
 export default function Card(props) {
-  const { firstName, lastName, phone, email, birthday} = props;
+  const { firstName, lastName, phone, email, birthday, image} = props;
   return (
     <div className='bg-white rounded-xl'>
       <div className='flex items-center justify-between px-4 py-3'>
@@ -12,8 +12,11 @@ export default function Card(props) {
       </div>
       <hr />
       <div className='px-4 py-3'>
-        <div className='flex items-center justify-center border border-[#8a8a88] rounded-full w-[150px] h-[150px] mx-auto text-[#8a8a88] font-bold'>
+        {/* <div className='flex items-center justify-center border border-[#8a8a88] rounded-full w-[80%] h-[150px] mx-auto text-[#8a8a88] font-bold'>
           Photo
+        </div> */}
+        <div className='flex items-center justify-center mx-auto'>
+          <img src={image} alt="img-thumbnail" className='rounded-full' />
         </div>
         <div className='mt-4'>
           <div className='mb-1'>
@@ -30,7 +33,7 @@ export default function Card(props) {
           </div>
           <div className='mb-1'>
             <p className='text-sm text-[#8a8a88] font-bold'>Email</p>
-            <p className='text-[#8a8a88] text-base'>{email}</p>
+            <p className='text-[#8a8a88] text-base text-clip overflow-hidden'>{email}</p>
           </div>
         </div>
       </div>

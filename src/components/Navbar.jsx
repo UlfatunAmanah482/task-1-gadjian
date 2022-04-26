@@ -18,7 +18,7 @@ export default function Navbar() {
         <button className='md:hidden mx-2' onClick={handleOnClick}>
           <FontAwesomeIcon icon={faBars} />
         </button>
-        <img src='/assets/images/logo-gadjian.png' alt='logo-gadjian' className='w-[20%]' />
+        <img src='/assets/images/logo-gadjian.png' alt='logo-gadjian' className='w-[30%]' />
       </div>
       <div className='hidden md:block' id='list'>
         <ul>
