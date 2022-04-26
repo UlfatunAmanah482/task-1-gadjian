@@ -18,26 +18,26 @@ export default function Navbar() {
         <button className='md:hidden mx-2' onClick={handleOnClick}>
           <FontAwesomeIcon icon={faBars} />
         </button>
-        <img src='/assets/images/logo-gadjian.png' alt='logo-gadjian' className='w-[10%]' />
+        <img src='/assets/images/logo-gadjian.png' alt='logo-gadjian' className='w-[20%]' />
       </div>
       <div className='hidden md:block' id='list'>
         <ul>
           <li>
-            <a href='/'>
+            <a href='/' className='hover:text-[#1cc1bf]'>
               <FontAwesomeIcon icon={faHouseChimney} className='mx-2 w-4' />
-              <span>Beranda</span>
+              <span className='text-[#5f5f5f] font-semibold hover:text-[#1cc1bf]'>Beranda</span>
             </a>
           </li>
           <li>
-            <a href='/'>
+            <a href='/' className='hover:text-[#1cc1bf]'>
               <FontAwesomeIcon icon={faUsers} className='mx-2 w-4' />
-              <span>Personnel List</span>
+              <span className='text-[#5f5f5f] font-semibold hover:text-[#1cc1bf]'>Personnel List</span>
             </a>
           </li>
           <li>
-            <a href='/'>
+            <a href='/' className='hover:text-[#1cc1bf]'>
               <FontAwesomeIcon icon={faCalendarDays} className='mx-2 w-4' />
-              <span>Daily Attendance</span>
+              <span className='text-[#5f5f5f] font-semibold hover:text-[#1cc1bf]'>Daily Attendance</span>
             </a>
           </li>
         </ul>
