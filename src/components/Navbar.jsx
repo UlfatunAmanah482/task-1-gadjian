@@ -13,6 +13,44 @@ export default function Navbar() {
     }
   }
   return (
+    // <div className='container mx-auto'>
+    //   <div className='flex items-center'>
+    //     <div>
+    //       <button className='md:hidden mx-2' onClick={handleOnClick}>
+    //         <FontAwesomeIcon icon={faBars} />
+    //       </button>
+    //       <img src='/assets/images/logo-gadjian.png' alt='logo-gadjian' className='w-[20%]' />
+    //     </div>
+    //     <div className="flex items-center justify-end text-center mb-5">
+    //       <div className='text-[#8a8a88]'>Hallo, <span className='text-[#1cc1bf] font-bold'>Gadjian User</span></div>
+    //       <div className='border border-black rounded-full w-[50px] h-[50px] mx-3'>
+    //         <div className=' text-[12px] py-4'>Photo</div>
+    //       </div>
+    //     </div>
+    //   </div>
+    //   <div className='hidden md:block' id='list'>
+    //     <ul>
+    //       <li>
+    //         <a href='/' className='hover:text-[#1cc1bf]'>
+    //           <FontAwesomeIcon icon={faHouseChimney} className='mx-2 w-4' />
+    //           <span className='text-[#5f5f5f] font-semibold hover:text-[#1cc1bf]'>Beranda</span>
+    //         </a>
+    //       </li>
+    //       <li>
+    //         <a href='/' className='hover:text-[#1cc1bf]'>
+    //           <FontAwesomeIcon icon={faUsers} className='mx-2 w-4' />
+    //           <span className='text-[#5f5f5f] font-semibold hover:text-[#1cc1bf]'>Personnel List</span>
+    //         </a>
+    //       </li>
+    //       <li>
+    //         <a href='/' className='hover:text-[#1cc1bf]'>
+    //           <FontAwesomeIcon icon={faCalendarDays} className='mx-2 w-4' />
+    //           <span className='text-[#5f5f5f] font-semibold hover:text-[#1cc1bf]'>Daily Attendance</span>
+    //         </a>
+    //       </li>
+    //     </ul>
+    //   </div>
+    // </div>
     <div className='container mx-auto'>
       <div className='flex items-center'>
         <button className='md:hidden mx-2' onClick={handleOnClick}>
@@ -43,19 +81,5 @@ export default function Navbar() {
         </ul>
       </div>
     </div>
-
-
-    // <div className='container mx-auto'>
-    //   <div className='flex justify-between items-center justify-items-center py-[3%]'>
-    //     <img src='/assets/images/logo-gadjian.png' alt='logo-gadjian' className='w-[10%]' />
-    //     <div className="flex items-center text-center">
-    //       <div className=''>Hallo, <span className='text-[#1cc1bf] font-bold'>Gadjian User</span></div>
-    //       <div className='border border-black rounded-full w-[50px] h-[50px] mx-3'>
-    //         <div className=' text-[12px] py-4'>Photo</div>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>
-    
   )
 }
