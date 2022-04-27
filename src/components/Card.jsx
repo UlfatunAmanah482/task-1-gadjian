@@ -12,24 +12,21 @@ export default function Card(props) {
       </div>
       <hr />
       <div className='px-4 py-3'>
-        {/* <div className='flex items-center justify-center border border-[#8a8a88] rounded-full w-[80%] h-[150px] mx-auto text-[#8a8a88] font-bold'>
-          Photo
-        </div> */}
         <div className='flex items-center justify-center mx-auto'>
           <img src={image} alt="img-thumbnail" className='rounded-full' />
         </div>
         <div className='mt-4'>
           <div className='mb-1'>
             <p className='text-sm text-[#8a8a88] font-bold'>Name</p>
-            <p className='text-[#8a8a88] text-base'>{firstName} {lastName}</p>
+            <p className='text-[#8a8a88] text-base text-clip overflow-hidden'>{firstName} {lastName}</p>
           </div>
           <div className='mb-1'>
             <p className='text-sm text-[#8a8a88] font-bold'>Telephone</p>
-            <p className='text-[#8a8a88] text-base'>{phone}</p>
+            <p className='text-[#8a8a88] text-base text-clip overflow-hidden'>{phone}</p>
           </div>
           <div className='mb-1'>
             <p className='text-sm text-[#8a8a88] font-bold'>Birthday</p>
-            <p className='text-[#8a8a88] text-base'>{birthday}</p>
+            <p className='text-[#8a8a88] text-base text-clip overflow-hidden'>{birthday}</p>
           </div>
           <div className='mb-1'>
             <p className='text-sm text-[#8a8a88] font-bold'>Email</p>

@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react'
 import Card from './Card'
 import Pagination from './Pagination';
 import axios from 'axios';
-import { getAllUsers } from '../redux/actions/users'
+import { GET_USERS } from '../redux/constants/users'
 import { useDispatch } from 'react-redux'
 
 export default function CardList(props) {
@@ -13,22 +13,26 @@ export default function CardList(props) {
   const [users, setUsers] = useState([])
 
   const dispatch = useDispatch()
-
-  const postPerPage = 4;
+  const userPerPage = 4;
   
   useEffect(() => {
     axios.get('https://randomuser.me/api/?results=28')
       .then((res) => {
+        dispatch({
+          type: GET_USERS,
+          payload: {
+            data: res.data.results
+          }
+        })
         setUsers(res.data.results);
       });
-      dispatch(getAllUsers())
   }, [dispatch]);
 
-  const indexOfLastPost = currentPage * postPerPage;
-  const indexOfFirstPost = indexOfLastPost - postPerPage;
-  const currentUser = users.slice(indexOfFirstPost, indexOfLastPost);
+  const indexOfLastUser = currentPage * userPerPage;
+  const indexOfFirstUser = indexOfLastUser - userPerPage;
+  const currentUser = users.slice(indexOfFirstUser, indexOfLastUser);
 
-  const totalPages = Math.ceil(users.length / postPerPage)
+  const totalPages = Math.ceil(users.length / userPerPage)
 
   const nextPage= () => {
     setCurrentPage(currentPage === totalPages ? totalPages : currentPage + 1)
@@ -55,11 +59,13 @@ export default function CardList(props) {
           <div className='flex items-center'>
             <div className='border border-[#f0f0ed] p-2 mx-2'>
               <FontAwesomeIcon icon={faMagnifyingGlass} className='text-[#1cc1bf]' />
-              <span className='text-[#8a8a88] mx-2 font-medium'>Find Personnels</span>
+              <span className='text-[#8a8a88] mx-2 font-medium'>
+                <input type="text" placeholder="Find Personnels" className='text-[#8a8a88] mx-2 font-medium' />
+              </span>
             </div>
             <div className='border border-[#f0f0ed] bg-[#1cc1bf] p-2 mx-2 text-white'>
               <FontAwesomeIcon icon={faPlus} />
-              <span className='uppercase mx-2 font-medium'>Add Personnel</span>
+              <button className='uppercase mx-2 font-medium'>Add Personnel</button>
             </div>
           </div>
         </div>
@@ -76,7 +82,7 @@ export default function CardList(props) {
             ) : null
           }
         </div>
-        <Pagination postPerPage={postPerPage} totalPosts={users.length} nextPage={nextPage} previousPage={previousPage} />
+        <Pagination nextPage={nextPage} previousPage={previousPage} currentPage={currentPage} totalPages={totalPages} />
       </div>
     </div>
   )
