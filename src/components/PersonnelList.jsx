@@ -53,19 +53,19 @@ export default function PersonnelList(props) {
         </div>
       </div>
       <div className='bg-[#f9f9f6] p-7'>
-        <div className='bg-white flex justify-between items-center p-4'>
-          <div className='w-[50%]'>
-            <p className='uppercase text-[#1cc1bf] lg:text-xl text-xs font-bold'>personnel list</p>
-            <p className='text-[#8a8a88] lg:text-lg text-xs font-medium'>List of all personnel</p>
+        <div className='bg-white flex sm:flex-row flex-col justify-between items-center p-4'>
+          <div className='sm:mb-0 mb-3'>
+            <p className='uppercase text-[#1cc1bf] lg:text-xl text-base font-bold'>personnel list</p>
+            <p className='text-[#8a8a88] lg:text-lg text-base font-medium'>List of all personnel</p>
           </div>
-          <div className='flex items-center'>
-            <div className='flex items-center justify-center border border-[#f0f0ed] p-2 mx-2'>
+          <div className='flex sm:flex-row flex-col items-center sm:w-auto w-full gap-4'>
+            <div className='flex items-center justify-center border border-[#f0f0ed] p-2 mx-2 sm:w-auto w-full'>
               <FontAwesomeIcon icon={faMagnifyingGlass} className='text-[#1cc1bf]' />
               <span className='text-[#8a8a88] mx-2 font-medium'>
-                <input type="text" placeholder="Find Personnels" className='text-[#8a8a88] lg:text-base text-xs mx-2 font-medium' />
+                <input type="text" placeholder="Find Personnels" className='text-[#8a8a88] text-center lg:text-base text-xs mx-2 font-medium' />
               </span>
             </div>
-            <div className='flex items-center justify-center border border-[#f0f0ed] bg-[#1cc1bf] px-2 py-3 mx-2 text-white'>
+            <div className='flex items-center justify-center border border-[#f0f0ed] bg-[#1cc1bf] px-2 py-3 mx-2 text-white sm:w-auto w-full'>
               <button className='uppercase lg:text-xs text-[8px] mx-2 font-medium'>Add Personnel</button>
               <FontAwesomeIcon icon={faPlus} />
             </div>
