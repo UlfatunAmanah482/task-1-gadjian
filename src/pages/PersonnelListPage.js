@@ -1,14 +1,14 @@
 import React from 'react'
-import CardList from '../components/CardList'
+import PersonnelList from '../components/PersonnelList'
 import Navbar from '../components/Navbar'
 
-export default function PersonnelList() {
+export default function PersonnelListPage() {
   return (
-    <div className="container mx-auto py-[2%]">
+    <div className="container mx-auto py-[1%]">
       <div className='grid md:grid-cols-4'>
         <Navbar />
         <div className="md:col-span-3">
-          <CardList />
+          <PersonnelList />
         </div>
       </div>
     </div>

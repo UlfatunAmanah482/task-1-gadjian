@@ -8,13 +8,13 @@ export default function Pagination({ previousPage, nextPage, currentPage, totalP
           {
             currentPage <= 1 ? (
               <div className='mx-4'>
-                <button className="text-[#b8b8b7] font-semibold hover:cursor-not-allowed">
+                <button className="text-[#b8b8b7] font-semibold md:text-base text-sm hover:cursor-not-allowed">
                   {' < '} Previous Page
                 </button>
               </div>
             ) : (
               <div className='mx-4'>
-                <button className='text-[#5f5f5f] hover:text-[#464646] font-semibold' onClick={previousPage}>
+                <button className='text-[#5f5f5f] hover:text-[#464646] font-semibold md:text-base text-sm' onClick={previousPage}>
                   {' < '} Previous Page
                 </button>
               </div>
@@ -24,13 +24,13 @@ export default function Pagination({ previousPage, nextPage, currentPage, totalP
           {
             currentPage === totalPages ? (
               <div className='mx-4'>
-                <button className="text-[#b8b8b7] font-semibold hover:cursor-not-allowed">
+                <button className="text-[#b8b8b7] font-semibold md:text-base text-sm hover:cursor-not-allowed">
                   Next Page {' > '}
                 </button>
               </div>
             ) : (
               <div className='mx-4'>
-                <button className='text-[#5f5f5f] hover:text-[#464646] font-semibold' onClick={nextPage}>
+                <button className='text-[#5f5f5f] hover:text-[#464646] font-semibold md:text-base text-sm' onClick={nextPage}>
                   Next Page {' > '}
                 </button>
               </div>

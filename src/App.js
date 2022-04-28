@@ -1,9 +1,9 @@
-import PersonnelList from "./pages/PersonnelList";
+import PersonnelListPage from "./pages/PersonnelListPage";
 
 function App() {
   return (
     <div>
-      <PersonnelList />
+      <PersonnelListPage />
     </div>
   );
 }
